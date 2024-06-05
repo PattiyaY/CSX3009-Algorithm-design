@@ -1,3 +1,6 @@
+# Problem no. 1001
+# Website : https://acm.timus.ru/
+
 import sys
 import math
 numbers = list(map(int, sys.stdin.read().split()))
