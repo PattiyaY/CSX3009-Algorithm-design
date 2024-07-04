@@ -1,34 +1,20 @@
-def mincoin(v):
-    if v == 0:
+import sys
+sys.setrecursionlimit(10000)
+
+def mincoin(currentChange):
+    if currentChange == 0:
         return 0
     else:
-        mc = v
-        for c in coins:
-            if c <= v:
-                mc = min(mc,1 + mincoin(v-c))
-        return mc
+        minC = currentChange
+        for each in coin:
+            if each <= currentChange:
+                minC = min(minC, 1 + mincoin(currentChange-each))
+        return minC
 
 
 
-coins = list(map(int,input().split()))
-v = int(input())
-print(mincoin(v))
-# print(coin,v)
+coin = list(map(int,input().split()))
+coin = [0] + coin #set index 0 equal to 0
 
-# coin = [5, 4, 3, 1]
-# i = 0
-# X = 7
-# def minCoin(i,X,coin):
-#     answer = 0
-#     sum = 0
-#     while(sum != X):
-#         if (sum + coin[i] < X):
-#             sum = sum + coin[i]
-#             answer += 1
-#         elif coin[i] > sum:
-#             i+=1
-#         else:
-#             break
-#     return answer
-        
-# print(minCoin(i,X,coin))
+V = int(input()) #Current change
+print(mincoin(V))

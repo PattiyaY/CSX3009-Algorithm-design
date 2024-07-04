@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(10000)
 
-#Combination
+# Combination
 # Recursive code
 def comb(i):
     if i == n:

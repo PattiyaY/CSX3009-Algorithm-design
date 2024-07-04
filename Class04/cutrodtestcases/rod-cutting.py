@@ -1,14 +1,14 @@
-def maxRev(l):
-    if l == 0:
+def maxRev(length):
+    if length == 0:
         return 0
     else:
-        mxp = 0
-        for c in range(1,l+1):
-            mxp = max(mxp, p[c] + maxRev(l-c))
-        return mxp 
+        mxRevenue = 0
+        for i in range(1,length+1):
+            mxRevenue = max(mxRevenue, price[i] + maxRev(length-i))
+        return mxRevenue 
 
-p = list(map(int,input().split()))
-L = len(p)
-p = [0]+p
-print(p)
-print(maxRev(L))
+price = list(map(int,input().split()))
+length = len(price)
+price = [0]+ price
+print(price)
+print(maxRev(length))
