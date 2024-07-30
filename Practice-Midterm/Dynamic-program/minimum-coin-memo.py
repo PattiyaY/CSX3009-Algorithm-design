@@ -10,10 +10,8 @@ def minimum_coins(m, coins):
     else:
         answer = float("inf")
         for coin in coins:
-            subproblem = m - coin 
-            if subproblem < 0:
-                continue
-            answer = min(answer, 1 + minimum_coins(subproblem, coins))
+            if m >= coin:
+                answer = min(answer, 1 + minimum_coins(m-coin, coins))
     memo[m] = answer #added this line
     return answer
 
