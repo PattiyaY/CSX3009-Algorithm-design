@@ -1,0 +1,31 @@
+1. Harish want to buy exactly "K" kilograms apples for his "N" friends.
+2. The apples is packed into covers each contain "X" kilo (x > 0).
+3. "X" kilo would be valued at "Y" rupees, if "Y" is -1 
+    that means packet is not available.
+4. He decided to buy at most "N" pack for his "N" friends.
+5. you have to tell him the minimum amount of money he has to spend 
+    for his friends.
+
+Explanation of test cases:
+As there are only 3 and 4kg packets in the shop, he will not be able to satisfy his friends as he would not be able to buy exactly 5kg of apples.
+He can buy five 1kg packet as he has to buy 5 kg. So the min money he should spend is 5.
+
+INPUT:
+The first line of input will contain the number of test cases, C.
+--- c = int(input())
+
+Each test case will contain two lines.
+The first line containing N and K, the number of friends he has and the amount of Apples in kilograms which he should buy.
+--- N, K = map(int, input().split())
+
+The second line contains K space separated integers in which the ith integer specifies the price of a ‘i’kg apple packet. A value of -1 denotes that the corresponding packet is unavailable.
+--- prices = list(map(int, input().split()))
+
+OUTPUT:
+The output for each test case should be a single line containing the minimum amount of money he has to spend for his friends. 
+Print -1 if it is not possible for him to satisfy his friends.
+
+
+Hints :
+1 - ignore N solve with only K
+2 - This is question is of Unbounded Knapsack not bounded knapsack

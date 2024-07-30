@@ -9,7 +9,7 @@ def mincoin(currentChange):
         for each in coin:
             if each <= currentChange:
                 minC = min(minC, 1 + mincoin(currentChange-each))
-        return minC
+    return minC
 
 
 
