@@ -10,11 +10,11 @@ memo = [[None] * (secondLength + 1) for _ in range(firstLength + 1)]
 
 def editDistance(i, j):
     # Base cases
-    if i == firstLength and j < secondLength:
+    if i == firstLength and j < secondLength: #A runs out but B has not yet
         return secondLength - j
-    if i < firstLength and j == secondLength:
+    if i < firstLength and j == secondLength: #B runs out but A has not yet
         return firstLength - i
-    if i == firstLength and j == secondLength:
+    if i == firstLength and j == secondLength:#A length and B length is equal
         return 0
 
     # Check if the result for this state has already been computed

@@ -35,7 +35,7 @@ def min_coins(coins, V):
     return checkList[V] if checkList[V] != float('inf') else -1
 
 coins = [1, 4, 5]
-V = len(coins)
 
+print(min_coins(coins, 5))  # Output: 1
 print(min_coins(coins, 13))  # Output: 3
 print(min_coins(coins, 150)) # Output: 30

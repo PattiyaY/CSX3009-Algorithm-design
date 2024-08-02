@@ -1,0 +1,19 @@
+Selling stock
+    - estimated stock prices for next n hours for you (predicted prices are correct)
+    - want to know maximum profit that you can earn from one time of investing.
+
+HINT: Compute how price changes from day to day. The max profit is the total change that increases the most.
+
+INPUT:
+A sequence of 𝑛 numbers separated by a space; the stock price (per unit) in the next 𝑛
+hours, 1 ≤ 𝑛 ≤ 100000 
+
+--- prices = list(map(int, input().split()))
+--- n = len(prices) # hours
+
+Input:
+5 15 11 2 8 12 15 18
+# 10 -4 -9 6 4  3  3 the different price between each stock
+
+Output:
+16
