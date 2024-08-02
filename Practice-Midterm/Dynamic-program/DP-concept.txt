@@ -1,5 +1,0 @@
-Dynamic Programming = Recursion + Memoization
-    --> bottom-up approach
-        - we start to compute the subproblem first and then store in
-          dictionary.
-
